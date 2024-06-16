@@ -128,7 +128,7 @@ function App() {
 
             <img
               className="copy"
-              src="./assets/images/icon-copy.svg"
+              src="/assets/images/icon-copy.svg"
               alt="copy"
               onClick={copyPassword}
             />
@@ -220,7 +220,7 @@ function App() {
             <button type="submit">
               Generate{" "}
               <img
-                src="./assets/images/icon-arrow-right.svg"
+                src="/assets/images/icon-arrow-right.svg"
                 alt="right arrow"
               />
             </button>

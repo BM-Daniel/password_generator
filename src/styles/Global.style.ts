@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const Global = createGlobalStyle`
   @font-face {
     font-family: 'JetBrainsMono';
-    src: url('./src/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
 
     font-weight: normal;
     font-style: italic;
@@ -11,7 +11,7 @@ export const Global = createGlobalStyle`
 
   @font-face {
     font-family: 'JetBrainsMono';
-    src: url('./src/assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    src: url('/assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
 
     font-weight: normal;
     font-style: normal;
@@ -19,7 +19,7 @@ export const Global = createGlobalStyle`
 
   @font-face {
     font-family: 'JetBrainsMono';
-    src: url('./src/assets/fonts/static/JetBrainsMono-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/static/JetBrainsMono-Bold.ttf') format('truetype');
 
     font-weight: bold;
     font-style: normal;
@@ -27,7 +27,7 @@ export const Global = createGlobalStyle`
 
   @font-face {
     font-family: 'JetBrainsMono';
-    src: url('./src/assets/fonts/static/JetBrainsMono-BoldItalic.ttf') format('truetype');
+    src: url('/assets/fonts/static/JetBrainsMono-BoldItalic.ttf') format('truetype');
 
     font-weight: bold;
     font-style: italic;

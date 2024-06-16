@@ -1,7 +1,11 @@
-import { Global } from "./Global.style";
-import { Container, PasswordDisplay, PasswordOptions } from "./Shared.style";
+import { Global } from "./styles/Global.style";
+import { Container, PasswordDisplay, PasswordOptions } from "./styles/Shared.style";
 
 function App() {
+  function copyPassword() {
+
+  }
+
   return (
     <>
       <Global />
@@ -30,20 +34,23 @@ function App() {
           </div>
 
           <form>
-            <input type="range" name="slider" id="slider" min="8" max="15" value="10" />
+            <input type="range" name="slider" id="slider" min="0" max="15" />
             <label htmlFor="slider">Slider</label>
 
             <div className="checkboxes">
               <input type="checkbox" name="set-properties" id="uppercase" />
               <label htmlFor="uppercase">Include Uppercase Letters</label>
               <br />
+              <br />
 
               <input type="checkbox" name="set-properties" id="lowercase" />
               <label htmlFor="lowercase">Include Lowercase Letters</label>
               <br />
+              <br />
 
               <input type="checkbox" name="set-properties" id="numbers" />
               <label htmlFor="numbers">Include Numbers</label>
+              <br />
               <br />
 
               <input type="checkbox" name="set-properties" id="symbols" />

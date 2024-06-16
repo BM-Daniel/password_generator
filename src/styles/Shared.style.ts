@@ -33,23 +33,31 @@ export const PasswordDisplay = styled.div`
   padding: 0 1rem;
   background-color: var(--dark-grey);
 
-  & p {
+  & > p {
     overflow: auto;
     font-weight: bold;
     font-size: 1.5rem;
+    padding: 0.3rem 0;
   }
 
-  & img {
-    /* border: solid green 2px; */
-    width: 1.5rem;
-    height: 1.5rem;
+  & > p.placeholder {
+    color: var(--grey);
+  }
 
-    &:hover {
-      cursor: pointer;
-    }
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 
-    &.copied {
-      display: none;
+    & img {
+      /* border: solid green 2px; */
+      width: 1.5rem;
+      height: 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--almost-white);
+      }
     }
   }
 
@@ -144,10 +152,33 @@ export const PasswordOptions = styled.section`
           font-weight: bold;
         }
 
-        & div.password-strength {
+        & div {
           width: 0.8rem;
           height: 1.5rem;
+        }
+
+        & div.strength-red {
+          background-color: var(--red);
+          border: solid var(--red) 2px;
+        }
+
+        & div.strength-orange {
+          background-color: var(--orange);
+          border: solid var(--orange) 2px;
+        }
+
+        & div.strength-yellow {
+          background-color: var(--yellow);
+          border: solid var(--yellow) 2px;
+        }
+
+        & div.strength-neon-green {
           background-color: var(--neon-green);
+          border: solid var(--neon-green) 2px;
+        }
+
+        & div.strength-empty {
+          background-color: transparent;
           border: solid var(--almost-white) 2px;
         }
       }

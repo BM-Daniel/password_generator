@@ -4,7 +4,7 @@ import {
   PasswordDisplay,
   PasswordOptions,
 } from "./styles/Shared.style";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 // Typescript Interfaces
 interface CheckedItems {
@@ -16,18 +16,18 @@ interface Characters {
 }
 
 function App() {
-  const [password, setPassword] = useState("");
-  const [isCopied, setIsCopied] = useState(false);
-  const [characterLength, setCharacterLength] = useState(8);
+  const [password, setPassword] = useState<string>("");
+  const [isCopied, setIsCopied] = useState<boolean>(false);
+  const [characterLength, setCharacterLength] = useState<number>(8);
   const [checkedItems, setCheckedItems] = useState<CheckedItems>({
     uppercase: false,
     lowercase: false,
     numbers: false,
     symbols: false,
   });
-  const [strength, setStrength] = useState("medium");
-  const [strengthColor, setStrengthColor] = useState("yellow");
-  const [strengthBox, setStrengthBox] = useState(2);
+  const [strength, setStrength] = useState<string>("medium");
+  const [strengthColor, setStrengthColor] = useState<string>("yellow");
+  const [strengthBox, setStrengthBox] = useState<number>(2);
 
   // Event handler for slider value
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,7 +65,7 @@ function App() {
   };
 
   // Function to copy generated password to clipboard
-  async function copyPassword() {
+  async function copyPassword(): Promise<void> {
     // Return from function if password field is empty
     if (password.length === 0) return
 
@@ -78,7 +78,7 @@ function App() {
     }
   }
 
-  function generatePassword(event: React.ChangeEvent<HTMLInputElement>) {
+  function generatePassword(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
 
     const characters: Characters = {

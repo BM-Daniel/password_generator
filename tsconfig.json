@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": ["node", "styled-components"]
+    "types": ["styled-components"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -18,7 +18,7 @@ interface Characters {
 function App() {
   const [password, setPassword] = useState<string>("");
   const [isCopied, setIsCopied] = useState<boolean>(false);
-  const [characterLength, setCharacterLength] = useState<number>(8);
+  const [characterLength, setCharacterLength] = useState<number>(10);
   const [checkedItems, setCheckedItems] = useState<CheckedItems>({
     uppercase: false,
     lowercase: false,
@@ -27,23 +27,28 @@ function App() {
   });
   const [strength, setStrength] = useState<string>("medium");
   const [strengthColor, setStrengthColor] = useState<string>("yellow");
-  const [strengthBox, setStrengthBox] = useState<number>(2);
+  const [strengthBox, setStrengthBox] = useState<number>(3);
 
   // Event handler for slider value
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
     setCharacterLength(value);
 
-    // Set values of password strength using divisions of 4
-    if (value <= 3) {
+    // Set values of password strength
+    if (value == 0) {
+      setStrength("");
+      setStrengthColor("");
+      setStrengthBox(0);
+    }
+    else if (value <= 4) {
       setStrength("TOO WEAK!");
       setStrengthColor("red");
       setStrengthBox(1);
-    } else if (value <= 7) {
+    } else if (value <= 8) {
       setStrength("WEAK");
       setStrengthColor("orange");
       setStrengthBox(2);
-    } else if (value <= 11) {
+    } else if (value <= 12) {
       setStrength("MEDIUM");
       setStrengthColor("yellow");
       setStrengthBox(3);
@@ -67,12 +72,12 @@ function App() {
   // Function to copy generated password to clipboard
   async function copyPassword(): Promise<void> {
     // Return from function if password field is empty
-    if (password.length === 0) return
+    if (password.length === 0) return;
 
     try {
       await navigator.clipboard.writeText(password);
       // console.log("Copied to clipboard: ", password);
-      setIsCopied(!isCopied);
+      setIsCopied(true);
     } catch (error) {
       console.error("Unable to copy to clipboard: ", error);
     }
@@ -126,12 +131,15 @@ function App() {
           <div>
             {isCopied && <p>COPIED</p>}
 
-            <img
-              className="copy"
-              src="/assets/images/icon-copy.svg"
-              alt="copy"
+            <svg
+              width="21"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
               onClick={copyPassword}
-            />
+              className="copy"
+            >
+              <path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" />
+            </svg>
           </div>
         </PasswordDisplay>
 
@@ -147,7 +155,7 @@ function App() {
               name="slider"
               id="slider"
               min="0"
-              max="15"
+              max="17"
               value={characterLength}
               onChange={handleSliderChange}
             />
@@ -219,10 +227,9 @@ function App() {
 
             <button type="submit">
               Generate{" "}
-              <img
-                src="/assets/images/icon-arrow-right.svg"
-                alt="right arrow"
-              />
+              <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+                <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+              </svg>
             </button>
           </form>
         </PasswordOptions>

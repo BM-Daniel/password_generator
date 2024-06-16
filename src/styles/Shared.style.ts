@@ -49,14 +49,14 @@ export const PasswordDisplay = styled.div`
     align-items: center;
     gap: 0.5rem;
 
-    & img {
-      /* border: solid green 2px; */
+    & svg {
       width: 1.5rem;
       height: 1.5rem;
+      fill: var(--neon-green);
 
       &:hover {
         cursor: pointer;
-        color: var(--almost-white);
+        fill: var(--almost-white);
       }
     }
   }
@@ -187,7 +187,8 @@ export const PasswordOptions = styled.section`
     & button {
       width: 100%;
       background-color: var(--neon-green);
-      border: none;
+      cursor: pointer;
+      border: solid var(--neon-green) 2px;
       display: inline-block;
       padding: 1rem 0;
       text-transform: uppercase;
@@ -197,6 +198,15 @@ export const PasswordOptions = styled.section`
       gap: 1rem;
       font-weight: bold;
       font-size: 1rem;
+
+      &:hover {
+        background-color: var(--dark-grey);
+        color: var(--neon-green);
+
+        & svg {
+          fill: var(--neon-green);
+        }
+      }
     }
   }
 

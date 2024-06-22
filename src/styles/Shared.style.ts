@@ -120,31 +120,6 @@ export const PasswordOptions = styled.section`
         background: var(--neon-green);
         height: 0.5rem;
       }
-
-      /* ----------------------------------- */
-
-      /* &::-ms-track {
-        width: 100%;
-        height: 0.5rem;
-        background: red; 
-        border-color: red; 
-        border-radius: 5px;
-      } */
-
-      /* Filled part (progress) for IE and Edge */
-      /* &::-ms-fill-lower {
-        background: yellow;
-        border-radius: 5px;
-        border: solid red 2px;
-      } */
-
-      /* Unfilled part for IE and Edge */
-      /* &::-ms-fill-upper {
-        background: var(--very-dark-grey);
-        background: red;
-        border: solid red 2px;
-        border-radius: 5px;
-      } */
     }
 
     & > label {
@@ -152,7 +127,7 @@ export const PasswordOptions = styled.section`
     }
 
     & .checkboxes {
-      /* & label {
+      & label {
         display: block;
         position: relative;
         margin-bottom: 12px;
@@ -164,33 +139,30 @@ export const PasswordOptions = styled.section`
         display: flex;
         align-items: center;
         gap: 10px;
+
+        & input {
+          opacity: 0;
+          position: absolute;
+        }
+
+        & span {
+          position: relative;
+          display: inline-block;
+          border: solid var(--almost-white) 2px;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+        }
       }
 
-      & input {
-        opacity: 0;
-        position: absolute;
-      }
-
-      & span {
-        position: relative;
-        display: inline-block;
-        border: solid var(--almost-white) 2px;
-        width: 20px;
-        height: 20px;
-        background-color: transparent;
-      } */
-
-      /* & label:hover input ~ span {
+      & label:hover input ~ span {
         border: solid var(--neon-green) 2px;
-      } */
+      }
 
-      /* & label input:checked ~ span {
+      & label input:checked ~ span {
         background-color: var(--neon-green);
-      } */
-
-      /* & label input:checked ~ span:after {
-        content: "\2713";
-      } */
+        border: solid var(--neon-green) 2px;
+      }
     }
 
     & .strength {

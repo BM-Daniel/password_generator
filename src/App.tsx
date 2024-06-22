@@ -39,8 +39,7 @@ function App() {
       setStrength("");
       setStrengthColor("");
       setStrengthBox(0);
-    }
-    else if (value <= 4) {
+    } else if (value <= 4) {
       setStrength("TOO WEAK!");
       setStrengthColor("red");
       setStrengthBox(1);
@@ -162,48 +161,53 @@ function App() {
             <label htmlFor="slider">Slider</label>
 
             <div className="checkboxes">
-              <input
-                type="checkbox"
-                name="uppercase"
-                id="uppercase"
-                checked={checkedItems.uppercase}
-                onChange={handleCheckboxChange}
-              />
-              <label htmlFor="uppercase">Include Uppercase Letters</label>
-              <br />
-              <br />
+              <label htmlFor="uppercase">
+                <input
+                  type="checkbox"
+                  name="uppercase"
+                  id="uppercase"
+                  checked={checkedItems.uppercase}
+                  onChange={handleCheckboxChange}
+                />
+                <span></span>
+                Include Uppercase Letters
+              </label>
 
-              <input
-                type="checkbox"
-                name="lowercase"
-                id="lowercase"
-                checked={checkedItems.lowercase}
-                onChange={handleCheckboxChange}
-              />
-              <label htmlFor="lowercase">Include Lowercase Letters</label>
-              <br />
-              <br />
+              <label htmlFor="lowercase">
+                <input
+                  type="checkbox"
+                  name="lowercase"
+                  id="lowercase"
+                  checked={checkedItems.lowercase}
+                  onChange={handleCheckboxChange}
+                />
+                <span></span>
+                Include Lowercase Letters
+              </label>
 
-              <input
-                type="checkbox"
-                name="numbers"
-                id="numbers"
-                checked={checkedItems.numbers}
-                onChange={handleCheckboxChange}
-              />
-              <label htmlFor="numbers">Include Numbers</label>
-              <br />
-              <br />
+              <label htmlFor="numbers">
+                <input
+                  type="checkbox"
+                  name="numbers"
+                  id="numbers"
+                  checked={checkedItems.numbers}
+                  onChange={handleCheckboxChange}
+                />
+                <span></span>
+                Include Numbers
+              </label>
 
-              <input
-                type="checkbox"
-                name="symbols"
-                id="symbols"
-                checked={checkedItems.symbols}
-                onChange={handleCheckboxChange}
-              />
-              <label htmlFor="symbols">Include Symbols</label>
-              <br />
+              <label htmlFor="symbols">
+                <input
+                  type="checkbox"
+                  name="symbols"
+                  id="symbols"
+                  checked={checkedItems.symbols}
+                  onChange={handleCheckboxChange}
+                />
+                <span></span>
+                Include Symbols
+              </label>
             </div>
 
             <div className="strength">

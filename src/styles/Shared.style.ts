@@ -68,7 +68,6 @@ export const PasswordDisplay = styled.div`
 `;
 
 export const PasswordOptions = styled.section`
-  /* border: solid red 2px; */
   width: 25rem;
   margin-top: 1rem;
   padding: 0rem 1rem 2rem;
@@ -92,41 +91,106 @@ export const PasswordOptions = styled.section`
       margin-bottom: 1rem;
       -webkit-appearance: none;
       appearance: none;
-      background: transparent;
-      cursor: pointer;
+      height: 0.5rem;
+
+      /* Track line */
+      background: var(--very-dark-grey);
+
+      /* Thumb (slider handle) */
+      &::-webkit-slider-thumb,
+      &::-moz-range-thumb,
+      &::-ms-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1rem;
+        height: 1rem;
+        /* background: var(--neon-green); */
+        /* border: solid var(--neon-green) 2px; */
+        border-radius: 50%;
+        cursor: pointer;
+      }
 
       &::-webkit-slider-runnable-track,
       &::-moz-range-track {
+        height: 0.5rem;
+        /* background: var(--very-dark-grey); */
+      }
+
+      &::-moz-range-progress {
         background: var(--neon-green);
-        height: 0.4rem;
+        height: 0.5rem;
       }
 
-      &::-webkit-slider-thumb,
-      &::-moz-range-thumb {
-        background-color: var(--almost-white);
-        border: solid var(--almost-white) 2px;
-        border-radius: 50%;
-        height: 1rem;
-        width: 1rem;
-      }
+      /* ----------------------------------- */
 
-      &:hover::-webkit-slider-thumb,
-      &:hover::-moz-range-thumb {
-        background-color: var(--very-dark-grey);
-        border: solid var(--neon-green) 2px;
-      }
+      /* &::-ms-track {
+        width: 100%;
+        height: 0.5rem;
+        background: red; 
+        border-color: red; 
+        border-radius: 5px;
+      } */
+
+      /* Filled part (progress) for IE and Edge */
+      /* &::-ms-fill-lower {
+        background: yellow;
+        border-radius: 5px;
+        border: solid red 2px;
+      } */
+
+      /* Unfilled part for IE and Edge */
+      /* &::-ms-fill-upper {
+        background: var(--very-dark-grey);
+        background: red;
+        border: solid red 2px;
+        border-radius: 5px;
+      } */
     }
 
     & > label {
       display: none;
     }
 
-    & .checkboxes input {
-      margin-right: 0.5rem;
-
-      &:checked {
-        outline: none;
+    & .checkboxes {
+      /* & label {
+        display: block;
+        position: relative;
+        margin-bottom: 12px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
+
+      & input {
+        opacity: 0;
+        position: absolute;
+      }
+
+      & span {
+        position: relative;
+        display: inline-block;
+        border: solid var(--almost-white) 2px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+      } */
+
+      /* & label:hover input ~ span {
+        border: solid var(--neon-green) 2px;
+      } */
+
+      /* & label input:checked ~ span {
+        background-color: var(--neon-green);
+      } */
+
+      /* & label input:checked ~ span:after {
+        content: "\2713";
+      } */
     }
 
     & .strength {

@@ -25,10 +25,8 @@ hosts are:
 - [GitHub Pages](https://pages.github.com/ )
 - [Vercel](https://vercel.com/ )
 - [Netlify](https://www.netlify.com/ )
-- You can host your site using one of these solutions or any of our other trusted providers.
-
-[Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe)
+- You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe)
 
 ## Link to Deployed Project
 The link below takes you to the deployed project
-[Password_Generator_App](https://password-generator-9dbs.onrender.com)
+### [Password_Generator_App](https://password-generator-9dbs.onrender.com)

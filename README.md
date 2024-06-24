@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Password Generator App - AmaliTech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* This is a training + pre-selection process offerred by AmaliTech to enrol student graduates into their NSS program. I selected Frontend during the form process
 
-Currently, two official plugins are available:
+* Some details about the project to be worked on are listed below.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Customer Requirements
+Your users should be able to:
+- Generate a password based on the selected inclusion options
+- Copy the generated password to the computer's clipboard
+- See a strength rating for their generated password
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-## Expanding the ESLint configuration
+## Deliverables
+- Tech stack for the solution MUST include TypeScript
+- Web application source code (GitHub - implement Git flow with a reasonable number of
+commits including a well-written README file)
+- CSS - Use styled-components
+- Deployed link
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Deploying your project
+- As mentioned above, there are many ways to host your project for free. Our recommend
+hosts are:
+- [GitHub Pages] (https://pages.github.com/ )
+- [Vercel] (https://vercel.com/ )
+- [Netlify] (https://www.netlify.com/ )
+- You can host your site using one of these solutions or any of our other trusted providers.
 
-- Configure the top-level `parserOptions` property like this:
+[Read more about our recommended and trusted hosts] (https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Link to Deployed Project
+The link below takes you to the deployed project
+[Password_Generator_App] (https://password-generator-9dbs.onrender.com)

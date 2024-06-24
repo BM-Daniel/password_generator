@@ -1,28 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* border: solid red 2px; */
-
-  & h1 {
-    color: var(--grey);
-    font-size: 1.8rem;
-  }
-
-  /* ----------------- media queries ----------------- */
-  @media screen and (max-width: 500px) {
-    padding: 0 2rem;
-
-    & h1 {
-      font-size: 1.5rem;
-    }
-  }
-`;
-
 export const PasswordDisplay = styled.div`
   /* border: solid red 2px; */
   width: 25rem;
@@ -86,83 +63,8 @@ export const PasswordOptions = styled.section`
   }
 
   & form {
-    & > input[type="range"] {
-      width: 100%;
-      margin-bottom: 1rem;
-      -webkit-appearance: none;
-      appearance: none;
-      height: 0.5rem;
-
-      /* Track line */
-      background: var(--very-dark-grey);
-
-      /* Thumb (slider handle) */
-      &::-webkit-slider-thumb,
-      &::-moz-range-thumb,
-      &::-ms-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 1rem;
-        height: 1rem;
-        /* background: var(--neon-green); */
-        /* border: solid var(--neon-green) 2px; */
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      &::-webkit-slider-runnable-track,
-      &::-moz-range-track {
-        height: 0.5rem;
-        /* background: var(--very-dark-grey); */
-      }
-
-      &::-moz-range-progress {
-        background: var(--neon-green);
-        height: 0.5rem;
-      }
-    }
-
-    & > label {
+    & > label.slider {
       display: none;
-    }
-
-    & .checkboxes {
-      & label {
-        display: block;
-        position: relative;
-        margin-bottom: 12px;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        & input {
-          opacity: 0;
-          position: absolute;
-        }
-
-        & span {
-          position: relative;
-          display: inline-block;
-          border: solid var(--almost-white) 2px;
-          width: 20px;
-          height: 20px;
-          background-color: transparent;
-        }
-      }
-
-      & label:hover input ~ span {
-        border: solid var(--neon-green) 2px;
-      }
-
-      & label input:checked ~ span {
-        background-color: var(--neon-green);
-        border: solid var(--neon-green) 2px;
-      }
     }
 
     & .strength {

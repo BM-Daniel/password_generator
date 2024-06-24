@@ -1,9 +1,8 @@
 import { Global } from "./styles/Global.style";
-import {
-  Container,
-  PasswordDisplay,
-  PasswordOptions,
-} from "./styles/Shared.style";
+import { Container } from "./styles/Container.style";
+import { PasswordDisplay, PasswordOptions } from "./styles/Password.style";
+import { CheckboxContainer } from "./styles/Checkbox.style";
+import { SliderContainer } from "./styles/Slider.style";
 import { useState } from "react";
 
 // Typescript Interfaces
@@ -116,6 +115,8 @@ function App() {
     setPassword(passwordString);
   }
 
+  // console.log(Math.floor(characterLength / 17 * 100));
+
   return (
     <>
       <Global />
@@ -149,65 +150,76 @@ function App() {
           </div>
 
           <form onSubmit={generatePassword}>
-            <input
-              type="range"
-              name="slider"
-              id="slider"
-              min="0"
-              max="17"
-              value={characterLength}
-              onChange={handleSliderChange}
-            />
-            <label htmlFor="slider">Slider</label>
+            <SliderContainer
+              value={`${Math.floor((characterLength / 17) * 100)}%`}
+            >
+              <input
+                type="range"
+                name="slider"
+                id="slider"
+                min="0"
+                max="17"
+                value={characterLength}
+                onChange={handleSliderChange}
+              />
+            </SliderContainer>
+            <label htmlFor="slider" className="slider">
+              Slider
+            </label>
 
             <div className="checkboxes">
-              <label htmlFor="uppercase">
-                <input
-                  type="checkbox"
-                  name="uppercase"
-                  id="uppercase"
-                  checked={checkedItems.uppercase}
-                  onChange={handleCheckboxChange}
-                />
-                <span></span>
-                Include Uppercase Letters
-              </label>
-
-              <label htmlFor="lowercase">
-                <input
-                  type="checkbox"
-                  name="lowercase"
-                  id="lowercase"
-                  checked={checkedItems.lowercase}
-                  onChange={handleCheckboxChange}
-                />
-                <span></span>
-                Include Lowercase Letters
-              </label>
-
-              <label htmlFor="numbers">
-                <input
-                  type="checkbox"
-                  name="numbers"
-                  id="numbers"
-                  checked={checkedItems.numbers}
-                  onChange={handleCheckboxChange}
-                />
-                <span></span>
-                Include Numbers
-              </label>
-
-              <label htmlFor="symbols">
-                <input
-                  type="checkbox"
-                  name="symbols"
-                  id="symbols"
-                  checked={checkedItems.symbols}
-                  onChange={handleCheckboxChange}
-                />
-                <span></span>
-                Include Symbols
-              </label>
+              <CheckboxContainer>
+                <label htmlFor="uppercase">
+                  <input
+                    type="checkbox"
+                    name="uppercase"
+                    id="uppercase"
+                    checked={checkedItems.uppercase}
+                    onChange={handleCheckboxChange}
+                  />
+                  <span></span>
+                  Include Uppercase Letters
+                </label>
+              </CheckboxContainer>
+              <CheckboxContainer>
+                <label htmlFor="lowercase">
+                  <input
+                    type="checkbox"
+                    name="lowercase"
+                    id="lowercase"
+                    checked={checkedItems.lowercase}
+                    onChange={handleCheckboxChange}
+                  />
+                  <span></span>
+                  Include Lowercase Letters
+                </label>
+              </CheckboxContainer>
+              <CheckboxContainer>
+                <label htmlFor="numbers">
+                  <input
+                    type="checkbox"
+                    name="numbers"
+                    id="numbers"
+                    checked={checkedItems.numbers}
+                    onChange={handleCheckboxChange}
+                  />
+                  <span></span>
+                  Include Numbers
+                </label>
+              </CheckboxContainer>
+              <CheckboxContainer>
+                <label htmlFor="symbols">
+                  <input
+                    type="checkbox"
+                    name="symbols"
+                    id="symbols"
+                    checked={checkedItems.symbols}
+                    onChange={handleCheckboxChange}
+                  />
+                  <span></span>
+                  Include Symbols
+                </label>
+              </CheckboxContainer>
             </div>
 
             <div className="strength">

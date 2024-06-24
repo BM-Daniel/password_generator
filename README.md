@@ -29,4 +29,4 @@ hosts are:
 
 ## Link to Deployed Project
 The link below takes you to the deployed project
-### [Password_Generator_App](https://password-generator-9dbs.onrender.com)
+> [Password_Generator_App](https://password-generator-9dbs.onrender.com)

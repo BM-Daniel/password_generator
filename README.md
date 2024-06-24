@@ -1,8 +1,8 @@
 # Password Generator App - AmaliTech
 
-* This is a training + pre-selection process offerred by AmaliTech to enrol student graduates into their NSS program. I selected Frontend during the form process
+* Hi, this is a training + pre-selection process offerred by AmaliTech to enrol student graduates into their NSS program. I selected Frontend during the form process
 
-* Some details about the project to be worked on are listed below.
+* Some details about the project are listed below.
 
 ## Customer Requirements
 Your users should be able to:
